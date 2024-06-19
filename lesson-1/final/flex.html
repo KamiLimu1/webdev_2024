@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+      /* when flex direction is row */
+      /* main axis = horizontal */
+      /* cross axis = vertical  */
+      .container {
+        height: 100vh;
+        display: flex;
+        gap: 10px;
+      }
+
+      .one {
+        background-color: aqua;
+        /* transition-property: background-color;
+        transition-duration: 0.5s;
+        transition-timing-function: ease; */
+        /* transform: scale(1); */
+        transition: height 2s ease-in-out 0.5s;
+      }
+
+      .one:hover {
+        /* transform: scale(2); */
+        height: 500px;
+        /* background-color: greenyellow; */
+      }
+
+      .two {
+        background-color: pink;
+        animation-name: pinky-animation;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes pinky-animation {
+        /* 0 seconds */
+        0% {
+          background-color: pink;
+        }
+
+        /* 1 second */
+        10% {
+          background-color: red;
+        }
+
+        /* 5 seconds */
+        50% {
+          background-color: yellow;
+        }
+
+        /* 10 seconds */
+        100% {
+          background-color: blue;
+        }
+      }
+
+      .three {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="one">One</div>
+      <div class="two">Two</div>
+      <div class="three">Three</div>
+    </section>
+  </body>
+</html>

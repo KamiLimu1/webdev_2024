@@ -1,0 +1,63 @@
+/* descendant selector */
+/* works with any child even if its not a direct child */
+.container p {
+  color: green;
+}
+
+/* child selector */
+/* child selector only works with direct children */
+.container > h2 {
+  color: red;
+}
+
+/* Adjacent sibling selector  */
+/* this will only target the next element */
+.container + div {
+}
+
+/* general sibling selector */
+.container ~ div {
+}
+
+/* pseudo classes */
+
+p:hover {
+  color: purple;
+}
+
+li:first-child {
+  color: yellow;
+}
+
+li:last-child {
+  color: green;
+}
+
+li:nth-child(3) {
+  color: purple;
+}
+
+li:nth-child(odd) {
+  background-color: red;
+}
+li:nth-child(even) {
+  background-color: purple;
+}
+
+.pixel-heading {
+  font-size: 60px;
+}
+
+.relative-heading {
+  font-size: 3rem;
+}
+
+p {
+  width: 50ch;
+}
+
+.div-one {
+  background-color: purple;
+  height: 30vh;
+  width: 30vw;
+}
