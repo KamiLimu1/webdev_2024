@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #id {
+        transition: transform 5s ease;
+        width: fit-content;
+      }
+      .rotated {
+        transform: rotate(180deg);
+        background-color: green;
+        transition: transform 1s ease, background-color 1s ease;
+      }
+      .container-class {
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container" class="container-class myClass"><h1>Heere</h1></div>
+
+    <button id="my-button" onclick="toggleContainerClass()">Click Me</button>
+  </body>
+  <script>
+    const button = document.getElementById("my-button")
+    const container = document.getElementById("container")
+
+    function toggleContainerClass() {
+      container.classList.toggle("rotated")
+    }
+
+    // button.addEventListener("click", () => {
+    //   container.classList.add("rotated")
+    //   container.classList.remove("container-class")
+    // })
+
+    // button.onclick = () => {
+    //   container.classList.toggle("rotated")
+    // }
+
+    // container.innerHTML = "<h1>Hello World </h1>" //dont do this. XSS attack vulnerabilty
+    // container.style.background = "red"
+  </script>
+</html>
